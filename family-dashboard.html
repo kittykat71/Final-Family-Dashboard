@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="300">
+<title>Family Command Center</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 75% 25%;
+    gap: 4px;
+    background: #ddd;
+}
+
+.panel {
+    background: white;
+    overflow: hidden;
+}
+
+.chores {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.calendar {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.meals {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="panel chores">
+        <iframe src="https://web-smoresup.firebaseapp.com/chores"></iframe>
+    </div>
+
+    <div class="panel calendar">
+        <iframe src="https://calendar.google.com/calendar/embed?src=sassykat71%40gmail.com&ctz=America%2FChicago"></iframe>
+    </div>
+
+    <div class="panel meals">
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ5Rd-ALESlwYrl6TlcGNH47r1xmigdyQ1Tdjd0Gk-mPgdbzPC5IwGASkQr0_TSFSDi1BjWTlTB2yAy/pub?embedded=true"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
